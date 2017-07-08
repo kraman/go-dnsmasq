@@ -2,7 +2,7 @@
 // Use of this source code is governed by The MIT License (MIT) that can be
 // found in the LICENSE file.
 
-package main // import "github.com/janeczku/go-dnsmasq"
+package main // import "github.com/kraman/go-dnsmasq"
 
 import (
 	"fmt"
@@ -16,15 +16,15 @@ import (
 	"syscall"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
-	logrus_syslog "github.com/Sirupsen/logrus/hooks/syslog"
 	"github.com/codegangsta/cli"
+	hosts "github.com/kraman/go-dnsmasq/hostsfile"
 	"github.com/miekg/dns"
+	log "github.com/sirupsen/logrus"
+	logrus_syslog "github.com/sirupsen/logrus/hooks/syslog"
 
-	"github.com/janeczku/go-dnsmasq/hostsfile"
-	"github.com/janeczku/go-dnsmasq/resolvconf"
-	"github.com/janeczku/go-dnsmasq/server"
-	"github.com/janeczku/go-dnsmasq/stats"
+	"github.com/kraman/go-dnsmasq/resolvconf"
+	"github.com/kraman/go-dnsmasq/server"
+	"github.com/kraman/go-dnsmasq/stats"
 )
 
 // set at build time
